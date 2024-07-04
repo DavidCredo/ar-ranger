@@ -2,7 +2,7 @@
 Dieses Dokument beinhaltet die technische Dokumentation des Projektes "AR Ranger" von Jona König und David Credo. Es soll einen Überblick über die Systeme und Komponenten des Projektes geben und deren Funktionsweisen erläutern.
 
 Projekttitel: AR Ranger
-Unity Version: 2020.3.17f1
+Unity Version: 2022.3.17f1
 Verwendete AR/VR Hardware: Open XR, Meta Quest 3 
 Teammitglieder: Jona König, David Credo
 
