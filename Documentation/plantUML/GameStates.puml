@@ -1,0 +1,7 @@
+@startuml
+[*] --> Onboarding : Start
+Onboarding --> MainGame : SkipOnboarding || CompleteOnboarding
+MainGame --> Lighthouse : ScannedAllCreatures
+Lighthouse --> MainGame : RevisitMainScene
+Lighthouse --> TopOfLighthouse : AnsweredAllQuestions
+@enduml

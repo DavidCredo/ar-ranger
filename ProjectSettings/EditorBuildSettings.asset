@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Playground_Interaction.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Level_MainScene.unity
+    guid: 1f94645b3bc2a404da01d347901b3ef3
+  - enabled: 1
+    path: Assets/Scenes/Level_Lighthouse-Basement.unity
+    guid: 9fe9e49a148fa41e089c9bb835e0942a
+  - enabled: 1
+    path: Assets/Scenes/Level_Fahrstuhl.unity
+    guid: 95d44a4cd650843208160fcd96827361
+  - enabled: 1
+    path: Assets/Scenes/Level_Lighthouse-1stFloor.unity
+    guid: ce49d7dd7ca3f4e299fa2c9dd6558e16
+  - enabled: 1
+    path: Assets/Scenes/Level_Lighthouse-2ndFloor.unity
+    guid: 858fcd95b83ce42719b5f558a7e7d3f3
+  - enabled: 1
+    path: Assets/Scenes/Level_Lighthouse-3rdFloor.unity
+    guid: 358ab47b23aee4151a3e3b4525180893
+  - enabled: 1
+    path: Assets/Scenes/Level_Lighthouse-Balcony.unity
+    guid: d293017eb975541bbb8b19b859456a61
+  - enabled: 0
+    path: Assets/Scenes/Playground_Greenscren-Studio.unity
+    guid: 7e03b83b03e094f12aa2781bfeb8db80
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8ac841fcb7562644f9ca704806acf663,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: be58b7cee17bb2545a81caf9a99e34e1,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0f0cf0bc9d4599a49a8b180c97f82582,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: cf8aba3c32b31cc478053c2c9ac20814,
+      type: 2}

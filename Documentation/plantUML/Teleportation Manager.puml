@@ -1,0 +1,42 @@
+@startuml
+
+class TeleportationManager {
+    -transitionAnimator : TransitionAnimator
+    -scenesToDestroyPlayer : string[]
+
+    + GoSomeWhere(position: Vector3, rotation: Quaternion, sceneName : string, trigger : TeleportationTrigger) : void
+    + ReturnToLastPlace() : void
+}
+
+class PlayerTeleportationInstructor {
+    -teleportationManager : TeleportationManager
+    -_player : Transform
+    _viewManipulator : ViewManipulator
+    _uiTimer : GameObject
+}
+
+enum TeleportationTrigger{
+    Quiz,
+    Door,
+    Automation
+}
+
+class TeleportationPlacesStack extends PersistentSingleton {
+    -teleportationPlaces : Stack<TeleportationPlace>
+    +LastSceneName : string
+    +LastTeleportationTrigger : TeleportationTrigger
+
+    + AddTeleportationPlace(teleportationPlace : TeleportationPlace) : void
+    +RemoveLastTeleportationPlace() : void
+    +GetLastTeleportationPlace() : TeleportationPlace
+    +IsEmpty() : bool
+    +Clear() : void
+}
+
+TeleportationPlacesStack -- TeleportationPlace
+TeleportationManager -- TeleportationPlacesStack
+TeleportationPlacesStack -- PlayerTeleportationInstructor
+TeleportationManager -- TeleportationTrigger
+TeleportationTrigger -- TeleportationPlacesStack
+@enduml
+

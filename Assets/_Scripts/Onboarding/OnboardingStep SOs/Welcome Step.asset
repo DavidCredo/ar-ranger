@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd96aa75b0c1ac64abc50e5642df5e99, type: 3}
+  m_Name: Welcome Step
+  m_EditorClassIdentifier: 
+  StepName: Willkommen!
+  StepDescription: "Hey, du! Willkommen zu einem spannenden Abenteuer! Wir starten
+    mit ein paar einfachen Schritten, um dich mit dem Spiel vertraut zu machen. H\xF6r
+    gut zu und folge den Anweisungen, damit du ein echter Spiel-Experte wirst. Bereit?
+    Dann los!"
+  IsCompleted: 0
+  Voiceover: {fileID: 8300000, guid: f53596f58f596d9428b93144cabd5bd0, type: 3}

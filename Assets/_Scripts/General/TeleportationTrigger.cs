@@ -1,0 +1,1 @@
+    public enum TeleportationTrigger { Quiz, Door, Automation };

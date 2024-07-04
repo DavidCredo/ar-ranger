@@ -1,0 +1,80 @@
+@startuml
+
+abstract class OnboardingStepSO implements ScriptableObject  {
+  + StepName: string
+  + StepDescription: string
+  + IsCompleted: bool
+  + Voiceover: AudioClip
+  +Initialize(onboardingUIController: OnboardingUIController, onboardingAudioController: OnboardingAudioController): void
+}
+
+class OnboardingUIController {
+  -_gazeProgressController: GazeProgressController
+  -_currentOnboardingStep: OnboardingStepSO
+  -_instructionsPanel: GameObject
+  -_transitionPanel: GameObject
+  -_transitionText: TextMeshProUGUI
+  -_playerTransform: Transform
+  -optionalInstructionsVideoPlane: GameObject
+  +CompleteOnboarding(): IEnumerator
+  +OnPortalEntered(@event: PortalEnteredEvent): void
+  +AnimateUIIntoView(distanceToPlayer: float, duration: float): void
+  +OnGazeDwellTimeSatisfied(): void
+  +ShowTransitionPanelNoGaze(onboardingStep: OnboardingStepSO, transitionText: string): void
+}
+
+class OnboardingProgressController {
+  -_onboardingSteps: List<OnboardingStepSO>
+  -_abilitySystem: IAbilitySystem
+  -_uiAudioSource: AudioSource
+  -_onboardingAudioController: OnboardingAudioController
+  -_onboardingStepCompletedBinding: EventBinding<OnboardingStepCompleted>
+  -_onboardingUIController: OnboardingUIController
+  -_currentStepIndex: int
+  +OnOnboardingStepCompleted(onboardingStepCompleted: OnboardingStepCompleted): void
+  +ProceedToNextStep(): void
+  +SkipOnboarding(): void
+}
+
+class OnboardingAbilitySystem implements IAbilitySystem, IDependencyProvider {
+  -_abilities: HashSet<IAbility>
+  -Start(): void
+  -ProvideAbilitySystem(): IAbilitySystem
+  +ActivateAbility(ability: IAbility): void
+  +ActivateAllAbilities(): void
+  +DeactivateAbility(ability: IAbility): void
+  +DeactivateAllAbilities(): void
+  +SkipOnboarding(): void
+}
+
+class TextOnboardingStepSO {   
+}
+
+enum EventType {
+  PortalEntered
+}
+
+class ExternalEventOnboardingStepSO {
+  -EventType: EventType
+  +OnEnable(): void
+  +Initialize(onboardingUIController: OnboardingUIController, onboardingAudioController: OnboardingAudioController): void
+  +OnEventRaised(): void
+}
+
+
+
+class AbilityOnboardingStepSO {
+  -AbilitySO: AbilitySO
+  -VideoClip: VideoClip
+  +Initialize(onboardingUIController: OnboardingUIController, onboardingAudioController: OnboardingAudioController): void
+}
+
+AbilityOnboardingStepSO --|> OnboardingStepSO
+OnboardingStepSO <|-- TextOnboardingStepSO
+OnboardingUIController -- OnboardingStepSO
+OnboardingProgressController -- OnboardingStepSO
+OnboardingProgressController -- OnboardingUIController
+OnboardingAbilitySystem -- OnboardingProgressController
+ExternalEventOnboardingStepSO --|> OnboardingStepSO
+ExternalEventOnboardingStepSO -- EventType
+@enduml

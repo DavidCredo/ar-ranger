@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc52ea4cdf4a323468760cd996a20b7d, type: 3}
+  m_Name: Scanning Onboarding Step
+  m_EditorClassIdentifier: 
+  StepName: Scanning
+  StepDescription: "Ziele mit deinem Scanner auf den grauen W\xFCrfel da dr\xFCben.
+    Ziele darauf, bis der Scanner sagt, dass er fertig ist. Du kannst auch probieren,
+    was passiert, wenn du den Scanner wegnimmst, bevor er fertig ist."
+  IsCompleted: 0
+  Voiceover: {fileID: 8300000, guid: 7c69503c6ef74a84a867935ae77d0deb, type: 3}
+  AbilitySO: {fileID: 11400000, guid: fd0ef53de4c0a194b8415ca19e066432, type: 2}
+  VideoClip: {fileID: 32900000, guid: 75a3a171070c2e84a9cbde03afaffae4, type: 3}

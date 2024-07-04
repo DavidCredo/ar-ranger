@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc52ea4cdf4a323468760cd996a20b7d, type: 3}
+  m_Name: Placing Portals Step
+  m_EditorClassIdentifier: 
+  StepName: Placing portals
+  StepDescription: "Nimm deine linke Hand und dreh sie um, als w\xFCrdest du ein
+    Tablett tragen. Zeige mit dem Strahl, der aus deiner Hand kommt, wohin das Portal
+    soll. Wenn du den perfekten Platz gefunden hast, mach eine Faust, aber lass den
+    Daumen dabei gerade.<br> Wenn es nicht gleich klappt, ist das kein Problem. Versuch
+    es einfach nochmal."
+  IsCompleted: 0
+  Voiceover: {fileID: 8300000, guid: 85d7412e49d1cdd469e7e9af24f25538, type: 3}
+  AbilitySO: {fileID: 11400000, guid: 37faac3c1f672f546a20fab8a673ee51, type: 2}
+  VideoClip: {fileID: 32900000, guid: 8fe23d646105eb9429165a0cf47b3188, type: 3}

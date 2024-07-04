@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3325604910687345289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5709379839674657635}
+  - component: {fileID: 8523700209382349948}
+  - component: {fileID: 96628059399731023}
+  - component: {fileID: 7463696234034567964}
+  - component: {fileID: 1059750994143855164}
+  m_Layer: 0
+  m_Name: OnboardingAbilitySystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5709379839674657635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325604910687345289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5713873, y: 2.1330495, z: 0.8404697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8523700209382349948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325604910687345289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023c2cae4b67cf44abe0a95c308bd6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoUnparentOnAwake: 1
+--- !u!114 &96628059399731023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325604910687345289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac227a1be3312544b8820ad326769eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScanAbilitySO: {fileID: 11400000, guid: fd0ef53de4c0a194b8415ca19e066432, type: 2}
+  _creatureScanner: {fileID: 0}
+--- !u!114 &7463696234034567964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325604910687345289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb405bddd97076429ca3c38b621b439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _locomotionSystem: {fileID: 0}
+  teleportAbilitySO: {fileID: 11400000, guid: e5727470bca949542ac23f65b3a53bc2, type: 2}
+--- !u!114 &1059750994143855164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325604910687345289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7073be4c42aa34aa759cd029486bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortalPlacementAbilitySO: {fileID: 11400000, guid: 37faac3c1f672f546a20fab8a673ee51,
+    type: 2}
+  _portalController: {fileID: 0}

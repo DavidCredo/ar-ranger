@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9628b9332e7444fdfb823664a39e2a6d, type: 3}
+  m_Name: Miesmuschel
+  m_EditorClassIdentifier: 
+  question: " Was macht die Miesmuschel so wertvoll f\xFCr unser Wattenmeer?"
+  answers:
+  - "Sie filtert enorme Mengen Meereswasser und sorgt so f\xFCr eine gute Wasserqualit\xE4t."
+  - "Durch die vielen Muschelb\xE4nke werden entsteht eine besondere Str\xF6mung."
+  - Sie vertreibt eine bedrohliche, invasive Art von Seesternen.
+  correctAnswerIndex: 0
+  congratulationText: "Miemuscheln k\xF6nnen wir wirklich dankbar sein! Sie filtern
+    Tag und Nacht das Wasser der Nordsee und f\xF6rdern die Artenvielfalt! Au\xDFerdem
+    haben sie den st\xE4rksten unterwasser-Klebstoff der Welt!"

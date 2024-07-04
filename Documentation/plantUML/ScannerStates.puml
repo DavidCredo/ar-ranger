@@ -1,0 +1,7 @@
+@startuml
+[*] --> ScannerDisabledState : Start
+ScannerDisabledState --> ScannerIdleState : IsUserAimingScanner()
+ScannerIdleState --> ScannerDisabledState : !IsUserAimingScanner()
+ScannerIdleState --> ScanningState : IsUserAimingScanner() && ScanForCreatures()
+ScanningState --> ScannerIdleState : !IsStillScanningCreature() || ScanComplete || AbortScan()
+@enduml
