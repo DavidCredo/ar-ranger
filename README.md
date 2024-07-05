@@ -36,7 +36,7 @@ Die meisten Ordner sind selbsterklärend, für das technische Verständnis ist d
 
 ### Event-Bus
 
-![Event-Bus](./Images/High%20_Level_Overview.png)
+![Event-Bus](./Documentation/Images/High%20_Level_Overview.png)
 
 Das Event-Bus System stellt das zentrale Kommunikationsmittel zwischen den verschiedenen Komponenten des Projektes dar. Es ermöglicht das Senden und Empfangen von Nachrichten, ohne dass die Komponenten voneinander wissen müssen. Dadurch wird eine starke Entkopplung der Komponenten erreicht, was die Wartbarkeit und Erweiterbarkeit des Projektes erhöht.
 Beispielhafte Verwendung:
@@ -142,19 +142,19 @@ void OnScan(ScanEvent e)
 ## Teilsysteme und Komponenten (UML)
 
 ### High Level State Diagram des Spiels
-![Game State Diagram](./Images/GameStates.png)
+![Game State Diagram](./Documentation/Images/GameStates.png)
 Hier ist der grobe Ablauf des Spiels dargestellt. Der Spieler startet im Onboarding, in dem er die Steuerung und das Spielkonzept kennenlernt. Anschließend kann er in die Hauptwelt wechseln, in der er die Lebewesen scannen kann. Nachdem er alle Lebewesen gescannt hat, kann er den Leuchtturm betreten um ein Quiz zu absolvieren. Nachdem er das Quiz bestanden hat, ist das Spiel beendet.
 
 ### UML-Diagramm des Onboarding-Systems
-![Onboarding Klassendiagramm](./Images/Onboarding.png)
+![Onboarding Klassendiagramm](./Documentation/Images/Onboarding.png)
 Das Onboarding-System besteht aus mehreren Komponenten, die zusammenarbeiten, um dem Spieler das Spielkonzept und die Steuerung zu vermitteln. Das Onboarding-System wird durch den OnboardingProgressController gesteuert, welcher die verschiedenen Onboarding-Phasen verwaltet. Die Onboarding-Phasen sind in als OnboardingStepSOs (ScriptableObjects) implementiert. Das Onboarding-System verwendet das Event-Bus-System, um mit anderen Komponenten zu kommunizieren. Beispielsweise wird ein Event gesendet, wenn ein OnboardingStep erfolgreich absolviert wurde.
 
 ### State Diagramm des Scanner-Systems
-![Scanner State Diagram](./Images/ScannerStates.png)
+![Scanner State Diagram](./Documentation/Images/ScannerStates.png)
 
 Um die Performance zu verbessern, kann der Scanner in einen "disabled" Zustand versetzt werden, in dem er keine RayCasts durchführt. Dieser Zustand wird verwendet, wenn der Spieler den Scanner nicht benutzt. Der Scanner kann ebenfalls in den "Idle" State übergehen, sobald der Spieler seinen Arm korrekt ausgerichtet hat. In diesem Zustand wird der Scanner aktiviert und kann Lebewesen scannen. Sobald ein Lebewesen gescannt wurde, wird der Scanner in den "Scanning" State versetzt, in dem der Scanner die Lebewesen scannt und ScanEvents mit dem aktuellen Fortschritt sowie des gescanntes Lebewesens sendet.
 
 ### Klassendiagramm des Teleportation Manager Systems
-![Teleportation Manager Klassendiagramm](./Images/Teleportation%20Manager.png)
+![Teleportation Manager Klassendiagramm](./Documentation/Images/Teleportation%20Manager.png)
 
 Dieses Konstruk ist dafür zuständig, den Spieler von einer Szene an einen konkreten Ort einer anderen Szene und wieder zurück zu bringen. Hierzu persistieren wir (nur auf dem Hinweg), die Start- und Zielkoordinaten, sowie sowie den Auslöser der Teleportation in einem Stack. Wir speichern auch, von wo der Spieler kommt, da verschachtelte Sprünge möglich sind. Der TeleportationManager gibt dabei aus der Szene heraus die Anweisungen, speichert sie im TeleportationPlacesStack und lädt die neue Szene. Der Spieler fragt nach jedem Laden einer neuen Szene, ob er seine Position nach anggaben des TeleportationPlacesStack verändern muss und berücksichtigt dabei den Auslöser der Teleportation. Ist eine Posisitonsänderung erforderlich, setzt er diese um und löscht den entsprechenden Eintrag aus dem Stack.
