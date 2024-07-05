@@ -39,6 +39,7 @@ Die meisten Ordner sind selbsterklärend, für das technische Verständnis ist d
 ![Event-Bus](./Documentation/Images/High%20_Level_Overview.png)
 
 Das Event-Bus System stellt das zentrale Kommunikationsmittel zwischen den verschiedenen Komponenten des Projektes dar. Es ermöglicht das Senden und Empfangen von Nachrichten, ohne dass die Komponenten voneinander wissen müssen. Dadurch wird eine starke Entkopplung der Komponenten erreicht, was die Wartbarkeit und Erweiterbarkeit des Projektes erhöht.
+Eine ausführliche Anleitung zur Implementierung ist auf dem YouTube Kanal https://www.youtube.com/@git-amend zu finden. 
 Beispielhafte Verwendung:
 
 ```csharp
